@@ -1,6 +1,3 @@
-#ifndef REC_H
-#define REC_H
-
 #include <QString>
 #include <QDate>
 #include <QSqlQuery>

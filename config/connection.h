@@ -14,4 +14,4 @@ public:
     void closeConnection();
 };
 
-#endif // CONNECTION_H
+#endif

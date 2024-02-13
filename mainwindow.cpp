@@ -1,5 +1,7 @@
 #include "mainwindow.h"
+#include "gestionRec/report.h"
 #include "ui_mainwindow.h"
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -13,17 +15,15 @@ void MainWindow::on_pushButton_ajouter_clicked()
     QString title = ui->titleLineEdit->text();
     QString description = ui->descriptionLineEdit->text();
 
-    Report report(title, description); // Assuming Report is the class representing a report
-    bool test = report.add(); // Assuming you have a method named 'add' to add the report to the database
+    Report report(title, description);
+    bool test = report.addReport();
 
     if (test)
     {
-        // Perform actions after successful addition of the report
         QMessageBox::information(this, "Success", "Report added successfully!");
     }
     else
     {
-        // Handle the case where the addition of the report failed
         QMessageBox::critical(this, "Error", "Failed to add report!");
     }
 }

@@ -35,7 +35,7 @@ void Dialog::setupTable()
 
 void Dialog::loadData()
 {
-    QSqlDatabase db = QSqlDatabase::database(); // Assuming you have already established a connection to your database
+    QSqlDatabase db = QSqlDatabase::database();
 
     QSqlQuery query(db);
     query.prepare("SELECT title, description FROM reports");
@@ -46,7 +46,7 @@ void Dialog::loadData()
             QList<QStandardItem *> row;
             row.append(new QStandardItem(title));
             row.append(new QStandardItem(description));
-            row.append(new QStandardItem("Show/Edit/Delete")); // Placeholder for action buttons
+            row.append(new QStandardItem("Show/Edit/Delete"));
             model->appendRow(row);
         }
     } else {

@@ -25,4 +25,4 @@ private:
     void loadData();
 };
 
-#endif // DIALOG_H
+#endif

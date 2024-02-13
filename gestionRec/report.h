@@ -11,7 +11,7 @@
 #include <QPrinter>
 #include <QPainter>
 #include <QPaintDevice>
-#include <algorithm>
+
 
 
 
@@ -30,6 +30,8 @@ public:
     Report(int id, int userID, QString title, QString description, QDate createdDate, QDate lastModifiedDate)
         : id(id), userID(userID), title(title), description(description), createdDate(createdDate), lastModifiedDate(lastModifiedDate) {}
 
+    Report(QString title, QString description)
+        : title(title), description(description) {}
     bool addReport() {
         QSqlQuery query;
         query.prepare("INSERT INTO Reports (UserID, Title, Description) VALUES (:userID, :title, :description)");
@@ -97,4 +99,4 @@ public:
 };
 
 
-#endif 
+#endif

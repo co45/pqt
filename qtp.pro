@@ -10,12 +10,16 @@ CONFIG += c++17
 
 SOURCES += \
     config/connection.cpp \
+    dialog.cpp \
+    gestionRec/report.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     config/connection.h \
     config/connection.h \
+    dialog.h \
+    gestionRec/report.h \
     mainwindow.h
 
 

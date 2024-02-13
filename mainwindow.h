@@ -24,4 +24,4 @@ private slots:
 
     void on_pushButton_ajouter_clicked();
 };
-#endif // MAINWINDOW_H
+#endif
