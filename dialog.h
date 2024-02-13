@@ -23,6 +23,7 @@ private:
     void setupModel();
     void setupTable();
     void loadData();
+    void showAddWindow();
 };
 
 #endif

@@ -4,6 +4,7 @@
 #include <QSqlError>
 #include <QDebug>
 #include <QSqlRecord>
+#include "mainwindow.h"
 
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
@@ -14,13 +15,19 @@ Dialog::Dialog(QWidget *parent) :
     setupModel();
     setupTable();
     loadData();
+    connect(ui->addButton, &QPushButton::clicked, this, &Dialog::showAddWindow);
+
 }
 
 Dialog::~Dialog()
 {
     delete ui;
 }
-
+void Dialog::showAddWindow()
+{
+    MainWindow addWindow;
+    addWindow.show();
+}
 void Dialog::setupModel()
 {
     model = new QStandardItemModel(0, 3, this);

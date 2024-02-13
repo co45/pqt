@@ -20,8 +20,7 @@ private:
     Ui::MainWindow *ui;
 
 
-private slots:
-
+public slots:
     void on_pushButton_ajouter_clicked();
 };
 #endif

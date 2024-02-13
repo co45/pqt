@@ -44,6 +44,13 @@
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="addButton">
+       <property name="text">
+        <string>Add</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="editButton">
        <property name="text">
         <string>Edit</string>
@@ -60,6 +67,24 @@
     </layout>
    </item>
   </layout>
+  <connections>
+   <connection>
+    <sender>addButton</sender>
+    <signal>clicked()</signal>
+    <receiver>Dialog</receiver>
+    <slot>showAddWindow()</slot>
+    <hints>
+     <hint type="sourcelabel">
+      <x>312</x>
+      <y>43</y>
+     </hint>
+     <hint type="destinationlabel">
+      <x>335</x>
+      <y>186</y>
+     </hint>
+    </hints>
+   </connection>
+  </connections>
  </widget>
  <resources/>
  <connections/>
